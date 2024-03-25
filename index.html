@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Nombres y Notas</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+
+    <button id="openModalBtn1">Crear Libro</button>
+    <button id="openModalBtn2">Listar Libros</button>
+    <button id="openModalBtn3">Buscador de Libros Por # Referencia</button>
+    
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Crear Libro 1</h2>
+        <form action="http://localhost:3000/creacion" method="post">
+            <label for="nombre1">Nombre del libro:</label>
+            <input type="text" id="nombre1" name="nombre" required><br><br>
+            <label for="genero1">Género del libro:</label>
+            <input type="text" id="genero1" name="genero" required><br><br>
+            <label for="referencia1"># referencia:</label>
+            <input type="text" id="referencia1" name="referencia" required><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </div>
+
+
+    
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Listar Libros</h2>
+        <form action="http://localhost:3000/listarlibros" method="GET">
+            <input type="submit" value="Click aqui para ver todos los libros">
+        </form>
+      </div>
+    </div>
+    
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2># Referencia</h2>
+          <form action="http://localhost:3000/buscar" method="GET"> 
+              <label for="consulta">Buscar por referencia:</label>
+              <input type="text" id="consulta" name="consultar1" required>
+              <input type="submit" value="Buscar">
+          </form>
+        </div>
+      </div>
+      
+    
+
+    
+<a href="https://github.com/FelipeForero21/GestionDeLibros.git" class="btn btn-verde">Ver Documentación</a>
+
+<script src="/src/modal/modal.js"></script>
+</body>
+</html>
